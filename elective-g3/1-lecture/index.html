@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border:1px solid black;
+            padding:5px;
+            margin: 5px;
+            
+        }
+        .top-bar{
+            background-color:lightgrey;
+            text-align:center;
+            font-weight:bold;
+        }
+        ul.main-menu{
+            background-color:lightblue;
+            list-style-type:none;
+            padding:0;
+            margin:0;
+            text-align:center;
+            border-radius: 5px;
+        }
+        ul.main-menu li{
+            display: inline;
+        }
+        ul.main-menu li a{
+            color: black;
+            text-decoration: none;
+        }
+        ul.main-menu li a:hover{
+            color: black;
+            font-weight: 900;
+            text-decoration: none;
+        }
+        .sidebar{
+            float:left;
+            background-color: aqua;
+            width: 20%;
+        }
+        .sidebar-right{
+            float:right;
+            background-color: lightgreen;
+            width: 20%;
+        }
+        .content{
+            
+            background-color: lightyellow;
+            min-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">Top Bar</div>
+    <div class="header">
+        <ul class="main-menu">
+            <li><a href="">Link</a></li>
+            <li><a href="">Link</a></li>
+            <li><a href="">Link</a></li>
+            <li><a href="">Link</a></li>
+            <li><a href="">Link</a></li>
+        </ul>
+    </div>
+    <div class="main-container">
+    <div class="sidebar">
+        <h4>
+        Side Bar
+    </h4>
+    <ul class="side-menu">
+        <li>text</li>
+        <li>text</li>
+        <li>text</li>
+    </ul>
+</div>
+    <div class="sidebar-right">Right Sides Bar</div>
+        <div class="content">
+            <h1>Lecture 1</h1>
+            <p>This is the content of the lecture.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+    </div>
+    
+</body>
+</html>
