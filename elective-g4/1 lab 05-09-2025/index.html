@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        div{
+            /* border: 1px solid black; */
+            padding: 5px;
+            margin: 5px;
+        }
+        .top-bar{
+            background-color: lightblue;
+            text-align: center;
+            font-weight: bold;
+        }
+        .main-menu li{
+            display: inline;
+            margin: 2px;
+        }
+        .main-menu{
+            background-color: cadetblue;
+            padding: 3px;
+            list-style-type: none;
+        }
+        .main-menu a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .main-menu a:hover{
+            color: red;
+            background-color: white;
+        }
+        .content{
+            background-color: lightgrey;
+        }
+        .left-sidebar{
+            /* background-color: lightgreen; */
+            width: 20%;
+            float: left;
+            height: 300px;
+        }
+        .right-sidebar{
+            /* background-color: lightcoral; */
+            width: 20%;
+            float: right;
+            height: 300px;
+        }
+        .footer{
+            clear:both
+        }
+        .content-container{
+            overflow: hidden;
+            /* background-color: magenta; */
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar"> Top bar</div>
+    <div class="header">
+        <ul class="main-menu">
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+        </ul>
+    </div>
+    <div class="content-container">
+        <div class="left-sidebar">Left Side bar</div>
+        <div class="right-sidebar">Right Sidebar</div>
+        <div class="content">Content</div>
+    </div>
+    <div class="footer">
+        Footer
+    </div>
+
+</body>
+</html>
