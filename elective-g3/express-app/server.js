@@ -17,13 +17,18 @@ const PORT = 3000;
 //http://localhost:3000/contact-us.html
 // if static files are in a folder named 'public', use the following line
 app.use(express.static("public"));
-
+app.set("view engine", "ejs");
 // app.get("/contact-us.html", (req, res) => {
 //   res.send("Contact Us Page");
 // });
 
+app.get("/contact-us", (req, res) => {
+  res.render("contactus");
+});
+
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  //   res.send("Hello World!");
+  res.render("homepage");
 });
 
 app.listen(PORT, () => {
