@@ -10,6 +10,8 @@
 
 const express = require("express");
 const app = express();
+var expressLayouts = require("express-ejs-layouts");
+
 const PORT = 3000;
 
 //expose public folder to the browser
@@ -18,6 +20,7 @@ const PORT = 3000;
 // if static files are in a folder named 'public', use the following line
 app.use(express.static("public"));
 app.set("view engine", "ejs");
+app.use(expressLayouts); //  setup layout mechanism
 // app.get("/contact-us.html", (req, res) => {
 //   res.send("Contact Us Page");
 // });
