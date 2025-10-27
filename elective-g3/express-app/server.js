@@ -13,6 +13,7 @@ const mongoose = require("mongoose");
 const app = express();
 var expressLayouts = require("express-ejs-layouts");
 var ProductModel = require("./models/product.model");
+let apiProductsRouter = require("./routes/api/products");
 const PORT = 3000;
 
 // MongoDB connection
@@ -45,40 +46,12 @@ app.use(expressLayouts); //  setup layout mechanism
 // app.get("/contact-us.html", (req, res) => {
 //   res.send("Contact Us Page");
 // });
-
-app.get("/api/products/:id", async (req, res) => {
-  const product = await ProductModel.findById(req.params.id);
-  res.send(product);
-});
-app.delete("/api/products/:id", async (req, res) => {
-  const product = await ProductModel.findByIdAndDelete(req.params.id);
-  res.send(product);
-});
-
-app.get("/api/products", async (req, res) => {
-  const products = await ProductModel.find();
-  res.send(products);
-});
-app.post("/api/products", async (req, res) => {
-  let data = req.body;
-  let record = new ProductModel(data);
-  await record.save();
-  res.send(record);
-});
-app.put("/api/products/:id", async (req, res) => {
-  let data = req.body;
-  // let record = await ProductModel.findByIdAndUpdate(req.params.id, data, {
-  //   new: true,
-  // });
-  let record = await ProductModel.findById(req.params.id);
-  record.name = data.name;
-  record.price = data.price;
-  record.description = data.description;
-  await record.save();
-  res.send(record);
-});
+app.use("/api/products", apiProductsRouter);
 
 app.get("/contact-us", (req, res) => {
+  res.render("contactus");
+});
+app.get("/hobbies.html", (req, res) => {
   res.render("contactus");
 });
 
