@@ -1,1 +1,18 @@
 <h1>Home Page</h1>
+<h3>
+    <%= pageTitle %>
+    <% console.log("Hello from ejs file") %>
+</h3>
+<% if (products.length==0) { %>
+ We atr out of stock
+<% } %>
+
+<% for( let index = 0; index < products.length; index++ ) { %>
+    <div class="product">
+        <h4 class="product-title">
+            <%= products[index].name %>
+        </h4>
+        <h4 class="product-price"><%= products[index].price %></h4>
+        <p class="product-description"><%= products[index].description %></p>
+    </div>
+<% } %>

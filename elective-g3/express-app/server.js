@@ -55,9 +55,11 @@ app.get("/hobbies.html", (req, res) => {
   res.render("contactus");
 });
 
-app.get("/", (req, res) => {
-  //   res.send("Hello World!");
-  res.render("homepage");
+app.get("/", async (req, res) => {
+  res.send("Hello World!");
+  // let products = await ProductModel.find();
+  // res.send(products);
+  // res.render("homepage", { products, pageTitle: "Toys for Little Angels" });
 });
 
 app.listen(PORT, () => {
