@@ -1,0 +1,20 @@
+<h3>My Awesome Products</h3>
+<% console.log("From inside homepage.ejs") %>
+<p>Hurra We have <%= total %> products</p>
+
+<% if (total<6) { %>
+ <div>We are out of stock</div>
+<% } else { %>
+ <div>Healthy Stock</div>
+<% } %>
+
+<div class="products">
+    <% for( let index = 0; index < products.length; index++ ) { %>
+        <div class="product">
+            <h5><%= products[index].title %></h5>
+            Only for <span><%= products[index].price %> PKR</span>
+            <div><%= products[index].description %></div>
+        </div>
+    <% } %>
+</div>
+
